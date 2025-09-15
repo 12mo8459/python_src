@@ -1,0 +1,162 @@
+my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+# Using map() on dictionary keys (convert keys to uppercase)
+# map returns an iterator, so we convert it to a list
+uppercase_keys = list(map(str.upper, my_dict.keys()))
+print("Uppercase keys using map():")
+print(uppercase_keys)
+
+# Using map() on dictionary values (double the values)
+# Using a lambda function
+doubled_values = list(map(lambda x: x * 2, my_dict.values()))
+print("\nDoubled values using map():")
+print(doubled_values)
+
+# Using map() on dictionary items (format key-value pairs as strings)
+# Using a lambda function
+formatted_items = list(map(lambda item: f"{item[0]}: {item[1]}", my_dict.items()))
+print("\nFormatted items using map():")
+print(formatted_items)
+
+# Example: Applying a function to values and creating a new dictionary
+# This is less common than dictionary comprehensions for creating new dicts
+new_values = map(lambda x: x + 10, my_dict.values())
+# zip keys with new values to create a new dictionary
+new_dict_from_map = dict(zip(my_dict.keys(), new_values))
+print("\nNew dictionary with modified values using map() and zip():")
+print(new_dict_from_map)
+
+'''keys = ['apple', 'banana', 'cherry']
+values = [1, 2, 3]
+
+# Using zip to create a list of key-value pairs (tuples)
+zipped_pairs = list(zip(keys, values))
+print("Zipped pairs (list of tuples):")
+print(zipped_pairs)
+
+# Using zip to create a dictionary from zipped pairs
+new_dict = dict(zip(keys, values))
+print("\nNew dictionary created from zip:")
+print(new_dict)
+
+# Example with different length iterables (zip stops at the shortest)
+more_values = [10, 20, 30, 40]
+zipped_unequal = list(zip(keys, more_values))
+print("\nZipped with unequal lengths:")
+print(zipped_unequal)
+
+# Combining zip with dictionary items (less common, but possible)
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+
+# Zipping items from two dictionaries - combines (key, value) pairs
+zipped_dict_items = list(zip(dict1.items(), dict2.items()))
+print("\nZipping items from two dictionaries:")
+print(zipped_dict_items)'''
+
+'''list_of_dicts = [
+    {'name': 'Alice', 'score': 85, 'city': 'Seoul'},
+    {'name': 'Bob', 'score': 92, 'city': 'Busan'},
+    {'name': 'Charlie', 'score': 78, 'city': 'Seoul'},
+    {'name': 'David', 'score': 95, 'city': 'Daegu'}
+]
+
+print("Iterating through a list of dictionaries with enumerate():")
+for index, person_dict in enumerate(list_of_dicts):
+  print(f"\nIndex: {index}")
+  print(f"  Name: {person_dict.get('name', 'N/A')}") # Use .get() for safer access
+  print(f"  Score: {person_dict.get('score', 'N/A')}")
+  print(f"  City: {person_dict.get('city', 'N/A')}")
+
+  # Example of conditional processing based on index or content
+  if index % 2 == 0:
+    person_dict['city'] = 'Seoul'
+    print("  (This is an even-indexed entry)")
+
+  if person_dict.get('city') == 'Seoul':
+      print("  (This person is from Seoul)")'''
+
+'''my_dict = {'apple': 10, 'banana': 5, 'cherry': 15, 'date': 8}
+
+print("Original dictionary:")
+print(my_dict)
+
+# Sort items by value
+# key=lambda item: item[1] tells sorted to use the second element of each tuple (the value) for sorting
+sorted_items_by_value = sorted(my_dict.items(), key=lambda item: item[1])
+print("\nSorted items by value:")
+print(sorted_items_by_value)
+
+# Find the item with the maximum value
+# key=lambda item: item[1] tells max to use the second element of each tuple (the value) for comparison
+max_item_by_value = max(my_dict.items(), key=lambda item: item[1])
+print("\nItem with maximum value:")
+print(max_item_by_value)
+
+# Create a new dictionary from sorted items
+sorted_dict_by_value = dict(sorted_items_by_value)
+print("\nNew dictionary sorted by value:")
+print(sorted_dict_by_value)'''
+
+'''my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+for index, (key, value) in enumerate(my_dict.items()):
+  print(f"Index: {index}, Key: {key}, Value: {value}")'''
+
+'''my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+print("Using .items():")
+for item in my_dict.items():
+  print(item)
+
+print("\nUsing .keys():")
+for key in my_dict.keys():
+  print(key)
+
+print("\nUsing .values():")
+for value in my_dict.values():
+  print(value)'''
+
+# my_dict = {'apple': 1, 'banana': 3, 'cherry': 2}
+
+'''print("Using sorted() on keys:")
+sorted_keys = sorted(my_dict.keys())
+print(sorted_keys)
+
+print("\nUsing sorted() on values:")
+sorted_values = sorted(my_dict.values())
+print(sorted_values)
+
+print("\nUsing sorted() on items:")
+sorted_items = sorted(my_dict.items())
+print(sorted_items)'''
+
+'''print("\nUsing max() on keys:")
+max_key = max(my_dict.keys())
+print(max_key)
+
+print("\nUsing max() on values:")
+max_value = max(my_dict.values())
+print(max_value)
+
+print("\nUsing max() on items (based on first element - key):")
+max_item_by_key = max(my_dict.items())
+print(max_item_by_key)'''
+
+'''print("\nUsing max() on items (based on second element - value):")
+max_item_by_value = max(my_dict.items(), key=lambda item: item[1])
+print(max_item_by_value)'''
+
+'''my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+print("Using .items():")
+for item in my_dict.items():
+  print(item)
+
+print("\nUsing .keys():")
+for key in my_dict.keys():
+  print(key)
+
+print("\nUsing .values():")
+for value in my_dict.values():
+  print(value)'''

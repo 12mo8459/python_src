@@ -1,0 +1,8 @@
+print(f'True {True}')
+print(f'False {False}')
+print(f'10 > 0 {10 > 0}')
+print(f'10 >= 0 {10 >= 0}')
+print(f'10 < 0 {10 < 0}')
+print(f'10 <= 0 {10 <= 0}')
+print(f'10 == 0 {10 == 0}')
+print(f'not 10 == 0 {not 10 == 0}')
